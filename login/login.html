@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification - Accès au Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<css>
+    <style>
+        /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #007bff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.auth-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.auth-form .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+    </style>
+</css>
+<body>
+    <header>
+        <h1>Accéder à votre Panneau d'Administration</h1>
+        <p>Entrez le code d'authentification que vous avez reçu lors de la création de votre planning.</p>
+    </header>
+
+    <section class="auth-form">
+        <h2>Code d'authentification</h2>
+        <form id="auth-form">
+            <div class="form-group">
+                <label for="auth-code">Code d'authentification</label>
+                <input type="text" id="auth-code" name="auth-code" required placeholder="Entrez votre code unique">
+            </div>
+            
+            <button type="submit" class="submit-btn">Accéder au Panel</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Planning des Événements. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('auth-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche la soumission par défaut
+
+            // Récupérer le code d'authentification
+            const authCode = document.getElementById('auth-code').value;
+
+            // Vérifier si le code d'authentification est valide (en pratique, tu vérifierais le code via une base de données)
+            if (authCode === "exemple12345") {  // Remplace par la logique réelle de validation
+                alert("Code valide ! Vous êtes redirigé vers le panneau.");
+                window.location.href = "panel.html";  // Remplace par l'URL de ton panneau
+            } else {
+                alert("Code invalide. Veuillez réessayer.");
+            }
+        });
+    </script>
+</body>
+</html>
