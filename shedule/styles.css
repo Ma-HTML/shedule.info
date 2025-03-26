@@ -1,0 +1,111 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #007bff;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Container for the schedule cards */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Style for individual schedule cards */
+.schedule-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    align-items: center;
+}
+
+/* Hover effect */
+.schedule-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles and Times */
+.schedule-title {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.schedule-time {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Status text with color */
+.schedule-status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.schedule-status.upcoming {
+    color: #ffc107; /* Yellow */
+}
+
+.schedule-status.past {
+    color: #dc3545; /* Red */
+}
+
+.schedule-status.current {
+    color: #28a745; /* Green */
+}
+
+/* Description */
+.schedule-description {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Animations for smooth appearance */
+.schedule-card {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
