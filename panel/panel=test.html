@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel d'Administration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<css>
+    <style>
+        /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #007bff;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.auth-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.auth-form .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+</style>
+</css>
+<body>
+    <header>
+        <h1>Bienvenue dans votre Panneau d'Administration</h1>
+        <p>Gérez vos plannings et événements ici.</p>
+    </header>
+
+    <section class="admin-panel">
+        <h2>Options disponibles</h2>
+        <ul>
+            <li><a href="edit-schedule.html">Modifier un planning</a></li>
+            <li><a href="view-schedules.html">Voir mes plannings</a></li>
+            <li><a href="shedule.info/logout.html">Se déconnecter</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Planning des Événements. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
